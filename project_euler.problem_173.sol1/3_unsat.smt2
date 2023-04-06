@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const limit_VAR Int)
+(assert (< 3 (+ (div limit_VAR 4) 2)))
+(assert (> 9 limit_VAR))
+(assert (< 4 (+ (div limit_VAR 4) 2)))
+(check-sat)
+(get-value (limit_VAR))

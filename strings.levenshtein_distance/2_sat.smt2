@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const first_word_VAR String)
+(declare-const second_word_VAR String)
+(assert (not (< (str.len first_word_VAR) (str.len second_word_VAR))))
+(assert (not (= (str.len second_word_VAR) 0)))
+(check-sat)
+(get-value (first_word_VAR))
+(get-value (second_word_VAR))

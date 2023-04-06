@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const t_limit_VAR Int)
+(declare-const n_limit_VAR Int)
+(assert (< 3 (+ (div t_limit_VAR 4) 2)))
+(assert (not (> 9 t_limit_VAR)))
+(check-sat)
+(get-value (t_limit_VAR))
+(get-value (n_limit_VAR))

@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const n_VAR Int)
+(assert (> (- n_VAR 1) 9999))
+(check-sat)
+(get-value (n_VAR))

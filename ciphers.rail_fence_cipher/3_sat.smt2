@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const input_string_VAR String)
+(declare-const key_VAR Int)
+(assert (< 0 key_VAR))
+(assert (< 1 key_VAR))
+(check-sat)
+(get-value (input_string_VAR))
+(get-value (key_VAR))

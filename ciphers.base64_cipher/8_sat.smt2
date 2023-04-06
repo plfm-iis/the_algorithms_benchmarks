@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const text_VAR String)
+(assert (< 0 (str.len text_VAR)))
+(assert (> (str.len text_VAR) 0))
+(assert (not (str.contains "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/" (str.at text_VAR 0))))
+(assert (= (str.at text_VAR 0) "="))
+(check-sat)
+(get-value (text_VAR))

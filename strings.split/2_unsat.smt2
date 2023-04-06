@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const string_VAR String)
+(declare-const separator_VAR String)
+(assert (< 0 (str.len string_VAR)))
+(assert (not (> (str.len string_VAR) 0)))
+(check-sat)
+(get-value (string_VAR))
+(get-value (separator_VAR))

@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const filename_VAR String)
+(assert (not (< (str.len filename_VAR) 0)))
+(assert (str.prefixof "/" filename_VAR))
+(check-sat)
+(get-value (filename_VAR))

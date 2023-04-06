@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const pbstring_VAR String)
+(assert (not (not (= (mod (str.len pbstring_VAR) 2) 0))))
+(assert (not (= pbstring_VAR "")))
+(check-sat)
+(get-value (pbstring_VAR))

@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const pence_VAR Int)
+(assert (< 1 (+ pence_VAR 1)))
+(check-sat)
+(get-value (pence_VAR))

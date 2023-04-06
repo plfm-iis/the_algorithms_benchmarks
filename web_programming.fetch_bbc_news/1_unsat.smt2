@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const bbc_news_api_key_VAR String)
+(assert (< (str.len (str.++ "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=" bbc_news_api_key_VAR)) 0))
+(check-sat)
+(get-value (bbc_news_api_key_VAR))

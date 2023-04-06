@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const n_VAR Int)
+(assert (<= 0 n_VAR))
+(assert (not (= 0 n_VAR)))
+(assert (not (> 0 n_VAR)))
+(assert (not (<= (+ (div (+ 0 n_VAR) 2) 1) n_VAR)))
+(check-sat)
+(get-value (n_VAR))

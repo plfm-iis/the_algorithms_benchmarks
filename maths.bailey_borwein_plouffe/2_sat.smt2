@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const digit_position_VAR Int)
+(declare-const precision_VAR Int)
+(assert (not (<= digit_position_VAR 0)))
+(assert (< precision_VAR 0))
+(check-sat)
+(get-value (digit_position_VAR))
+(get-value (precision_VAR))

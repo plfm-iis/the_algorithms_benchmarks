@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const roman_VAR String)
+(assert (< 0 (str.len roman_VAR)))
+(assert (not (< 1 (str.len roman_VAR))))
+(assert (not (> (str.len roman_VAR) 0)))
+(check-sat)
+(get-value (roman_VAR))

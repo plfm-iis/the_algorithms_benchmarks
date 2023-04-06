@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const decimal_VAR Int)
+(assert (not (= decimal_VAR 0)))
+(check-sat)
+(get-value (decimal_VAR))

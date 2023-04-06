@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const max_base_VAR Int)
+(assert (= max_base_VAR 1))
+(check-sat)
+(get-value (max_base_VAR))

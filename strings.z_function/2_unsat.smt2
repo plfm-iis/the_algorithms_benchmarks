@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const input_str_VAR String)
+(assert (< 1 (str.len input_str_VAR)))
+(assert (not (< 1 (str.len input_str_VAR))))
+(check-sat)
+(get-value (input_str_VAR))

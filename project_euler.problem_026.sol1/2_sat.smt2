@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const numerator_VAR Int)
+(declare-const digit_VAR Int)
+(assert (< numerator_VAR (+ digit_VAR 1)))
+(assert (< 1 (+ digit_VAR 1)))
+(check-sat)
+(get-value (numerator_VAR))
+(get-value (digit_VAR))

@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const old_path_VAR String)
+(declare-const new_path_VAR String)
+(assert (< (str.len old_path_VAR) 0))
+(check-sat)
+(get-value (old_path_VAR))
+(get-value (new_path_VAR))

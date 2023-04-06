@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const x_VAR Int)
+(declare-const y_VAR Int)
+(assert (not (= y_VAR 0)))
+(check-sat)
+(get-value (x_VAR))
+(get-value (y_VAR))

@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const sequence_VAR String)
+(assert (< 0 (str.len sequence_VAR)))
+(assert (not (> (str.len sequence_VAR) 0)))
+(check-sat)
+(get-value (sequence_VAR))

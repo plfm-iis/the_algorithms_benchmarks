@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const number_VAR Int)
+(assert (< 1 number_VAR))
+(assert (not (< number_VAR 4)))
+(check-sat)
+(get-value (number_VAR))

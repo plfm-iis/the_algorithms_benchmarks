@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const a_limit_VAR Int)
+(declare-const b_limit_VAR Int)
+(assert (< (+ (* a_limit_VAR (- 1)) 1) a_limit_VAR))
+(check-sat)
+(get-value (a_limit_VAR))
+(get-value (b_limit_VAR))

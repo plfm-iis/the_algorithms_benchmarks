@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const pattern_VAR String)
+(declare-const text_VAR String)
+(assert (< 1 (str.len pattern_VAR)))
+(assert (not (> (str.len pattern_VAR) 0)))
+(check-sat)
+(get-value (pattern_VAR))
+(get-value (text_VAR))

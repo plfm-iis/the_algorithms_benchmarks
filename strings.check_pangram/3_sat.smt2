@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const input_str_VAR String)
+(assert (< 0 (str.len input_str_VAR)))
+(assert (> (str.len input_str_VAR) 0))
+(assert (str.in.re (str.at input_str_VAR 0) (re.+ (re.range "a" "z"))))
+(check-sat)
+(get-value (input_str_VAR))

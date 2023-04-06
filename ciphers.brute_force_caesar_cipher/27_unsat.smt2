@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const message_VAR String)
+(assert (< 0 (str.len message_VAR)))
+(assert (not (> (str.len message_VAR) 0)))
+(check-sat)
+(get-value (message_VAR))

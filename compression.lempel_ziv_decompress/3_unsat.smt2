@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const data_bits_VAR String)
+(assert (not (< 0 (str.len data_bits_VAR))))
+(assert (not (< (str.len data_bits_VAR) 0)))
+(assert (< (str.len data_bits_VAR) 0))
+(check-sat)
+(get-value (data_bits_VAR))

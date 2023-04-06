@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const depth_VAR Int)
+(assert (< 2 (+ depth_VAR 1)))
+(check-sat)
+(get-value (depth_VAR))

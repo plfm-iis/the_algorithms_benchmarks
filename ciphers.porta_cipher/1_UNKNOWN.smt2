@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const key_VAR String)
+(declare-const words_VAR String)
+(assert (< 0 (str.len (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall key_VAR "a" "A") "b" "B") "c" "C") "d" "D") "e" "E") "f" "F") "g" "G") "h" "H") "i" "I") "j" "J") "k" "K") "l" "L") "m" "M") "n" "N") "o" "O") "p" "P") "q" "Q") "r" "R") "s" "S") "t" "T") "u" "U") "v" "V") "w" "W") "x" "X") "y" "Y") "z" "Z"))))
+(check-sat)
+(get-value (key_VAR))
+(get-value (words_VAR))

@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const n_term_VAR String)
+(assert (not (= n_term_VAR "")))
+(check-sat)
+(get-value (n_term_VAR))

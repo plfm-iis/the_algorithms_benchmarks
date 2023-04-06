@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const input_num_VAR Int)
+(assert (not (<= input_num_VAR 0)))
+(assert (< 1 (+ (div input_num_VAR 2) 1)))
+(assert (= (mod input_num_VAR 1) 0))
+(assert (< 2 (+ (div input_num_VAR 2) 1)))
+(check-sat)
+(get-value (input_num_VAR))

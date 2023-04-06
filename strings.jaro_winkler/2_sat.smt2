@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const str1_VAR String)
+(declare-const str2_VAR String)
+(assert (not (< (str.len str2_VAR) (str.len str1_VAR))))
+(assert (< 0 (str.len str1_VAR)))
+(check-sat)
+(get-value (str1_VAR))
+(get-value (str2_VAR))

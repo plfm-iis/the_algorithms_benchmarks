@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const nth_VAR Int)
+(assert (not (<= nth_VAR 0)))
+(check-sat)
+(get-value (nth_VAR))

@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const bin_string_VAR String)
+(assert (< 0 (str.len bin_string_VAR)))
+(assert (> (str.len bin_string_VAR) 0))
+(assert (str.contains "01" (str.at bin_string_VAR 0)))
+(check-sat)
+(get-value (bin_string_VAR))

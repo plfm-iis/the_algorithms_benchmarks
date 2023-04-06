@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const chain_length_VAR Int)
+(declare-const number_limit_VAR Int)
+(assert (< 1 (+ number_limit_VAR 1)))
+(check-sat)
+(get-value (chain_length_VAR))
+(get-value (number_limit_VAR))

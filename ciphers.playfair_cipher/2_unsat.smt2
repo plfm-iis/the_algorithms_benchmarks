@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const dirty_VAR String)
+(assert (< 0 (str.len dirty_VAR)))
+(assert (not (> (str.len dirty_VAR) 0)))
+(check-sat)
+(get-value (dirty_VAR))

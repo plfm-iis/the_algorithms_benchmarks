@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const plaintext_VAR String)
+(declare-const key_VAR String)
+(assert (not (< 0 (str.len (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall (str.replaceall key_VAR "a" "A") "b" "B") "c" "C") "d" "D") "e" "E") "f" "F") "g" "G") "h" "H") "i" "I") "j" "J") "k" "K") "l" "L") "m" "M") "n" "N") "o" "O") "p" "P") "q" "Q") "r" "R") "s" "S") "t" "T") "u" "U") "v" "V") "w" "W") "x" "X") "y" "Y") "z" "Z")))))
+(assert (< 0 (str.len plaintext_VAR)))
+(check-sat)
+(get-value (plaintext_VAR))
+(get-value (key_VAR))

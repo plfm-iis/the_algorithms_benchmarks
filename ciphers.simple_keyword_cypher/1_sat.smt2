@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const key_VAR String)
+(assert (< 0 (str.len key_VAR)))
+(check-sat)
+(get-value (key_VAR))

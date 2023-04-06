@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const number_of_simulations_VAR Int)
+(assert (not (< number_of_simulations_VAR 1)))
+(check-sat)
+(get-value (number_of_simulations_VAR))

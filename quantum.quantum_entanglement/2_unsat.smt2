@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const qubits_VAR Int)
+(assert (= qubits_VAR 0))
+(assert (not (= qubits_VAR 0)))
+(check-sat)
+(get-value (qubits_VAR))

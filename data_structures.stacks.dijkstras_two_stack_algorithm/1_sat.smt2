@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const equation_VAR String)
+(assert (< 0 (str.len equation_VAR)))
+(check-sat)
+(get-value (equation_VAR))

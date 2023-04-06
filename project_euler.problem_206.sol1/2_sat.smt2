@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const num_VAR Int)
+(assert (> num_VAR 0))
+(assert (not (not (= (mod num_VAR 10) 9))))
+(check-sat)
+(get-value (num_VAR))

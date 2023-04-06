@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const bit0_VAR Int)
+(declare-const bit1_VAR Int)
+(assert (not (= bit0_VAR 1)))
+(assert (= bit1_VAR 1))
+(check-sat)
+(get-value (bit0_VAR))
+(get-value (bit1_VAR))

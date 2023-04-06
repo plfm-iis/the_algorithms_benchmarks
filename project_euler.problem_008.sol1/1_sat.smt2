@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const n_VAR String)
+(assert (< 0 (- (str.len n_VAR) 12)))
+(check-sat)
+(get-value (n_VAR))

@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const filename_VAR String)
+(assert (< (str.len filename_VAR) 0))
+(check-sat)
+(get-value (filename_VAR))

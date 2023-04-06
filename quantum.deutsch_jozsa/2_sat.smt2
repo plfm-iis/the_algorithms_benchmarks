@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const case_VAR String)
+(declare-const num_qubits_VAR Int)
+(assert (= (+ num_qubits_VAR 1) 1))
+(assert (= case_VAR "balanced"))
+(check-sat)
+(get-value (case_VAR))
+(get-value (num_qubits_VAR))

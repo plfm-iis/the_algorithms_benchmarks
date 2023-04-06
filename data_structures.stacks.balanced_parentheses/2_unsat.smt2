@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const parentheses_VAR String)
+(assert (< 0 (str.len parentheses_VAR)))
+(assert (not (> (str.len parentheses_VAR) 0)))
+(check-sat)
+(get-value (parentheses_VAR))

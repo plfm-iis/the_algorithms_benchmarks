@@ -1,0 +1,8 @@
+(set-logic ALL)
+(declare-const message_body_VAR String)
+(declare-const slack_url_VAR String)
+(assert (not (< (str.len slack_url_VAR) 0)))
+(assert (str.contains slack_url_VAR "\t"))
+(check-sat)
+(get-value (message_body_VAR))
+(get-value (slack_url_VAR))

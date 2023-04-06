@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const n_VAR Int)
+(assert (< 1 (div n_VAR 3)))
+(assert (not (= (- (* 2 n_VAR) 2) 0)))
+(assert (= (* (- (- n_VAR 1) (div (- (* n_VAR n_VAR) (* 2 n_VAR)) (- (* 2 n_VAR) 2))) (- (- n_VAR 1) (div (- (* n_VAR n_VAR) (* 2 n_VAR)) (- (* 2 n_VAR) 2)))) (+ 1 (* (div (- (* n_VAR n_VAR) (* 2 n_VAR)) (- (* 2 n_VAR) 2)) (div (- (* n_VAR n_VAR) (* 2 n_VAR)) (- (* 2 n_VAR) 2))))))
+(check-sat)
+(get-value (n_VAR))

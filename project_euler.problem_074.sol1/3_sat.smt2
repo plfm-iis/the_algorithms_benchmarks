@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-const n_VAR Int)
+(assert (< 0 (str.len (ite (< n_VAR 0) (str.++ "-" (int.to.str (- n_VAR))) (int.to.str n_VAR)))))
+(assert (> (str.len (ite (< n_VAR 0) (str.++ "-" (int.to.str (- n_VAR))) (int.to.str n_VAR))) 0))
+(assert (not (= "0" (str.at (ite (< n_VAR 0) (str.++ "-" (int.to.str (- n_VAR))) (int.to.str n_VAR)) 0))))
+(check-sat)
+(get-value (n_VAR))

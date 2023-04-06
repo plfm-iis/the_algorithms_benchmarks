@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const sentence_VAR String)
+(assert (not (= sentence_VAR "")))
+(check-sat)
+(get-value (sentence_VAR))

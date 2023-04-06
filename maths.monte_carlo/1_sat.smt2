@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const iterations_VAR Int)
+(assert (< 0 iterations_VAR))
+(check-sat)
+(get-value (iterations_VAR))
